@@ -1,8 +1,8 @@
-#PUG Email
+# PUG Email
 
 This has been created to automate the process of making emails an easier process, with block elements and allowing re-useable elements
 
-##How to Setup
+## How to Setup
 
 1. Pull down the repo ( Download or Git Clone )
 2. Open Terminal / CMD
