@@ -1,0 +1,14 @@
+{
+  "name": "pug-email",
+  "version": "0.0.1",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/JimKT/pug-email"
+  },
+  "devDependencies": {
+    "gulp-pug": "3.3.0",
+    "pug": "2.0.0-beta11",
+    "gulp-replace": "*"
+    }
+}
