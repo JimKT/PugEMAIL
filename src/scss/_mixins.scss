@@ -1,0 +1,16 @@
+/* BUTTON MIXIN 
+============================================= */
+ 
+@mixin  btn-background($btn-background) {
+    
+    background-color: $btn-background;
+
+    &:hover { 
+        background-color: lighten($btn-background,10%) !important;
+    }
+
+    &:active, &:disabled, &:focus {
+        background-color: lighten($btn-background,15%) !important;
+    }
+
+}

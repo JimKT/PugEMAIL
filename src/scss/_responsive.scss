@@ -1,0 +1,160 @@
+/* -------------------------------------
+    RESPONSIVE AND MOBILE FRIENDLY STYLES
+------------------------------------- */
+
+.fluid-show {
+    display: none !important;
+}
+
+@media screen and (max-width: 600px) {
+    .email-container {
+        width: 100% !important;
+    }
+    .side-padding {
+        width: 92%!important;
+    }
+    .fluid,
+    .fluid-centered {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .fluid-text {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .fluid-centered {
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .fluid-hide {
+        max-width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .fluid-dfg {
+        width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .stack-column-center {
+        text-align: center !important;
+    }
+    .center-on-narrow {
+        text-align: center !important;
+        display: block !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        float: none !important;
+    }
+    table.center-on-narrow {
+        display: inline-block !important;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    td[class="footer-cta"] {
+        float: left !important;
+        width: 100% !important;
+    }
+    img[class="footer-cta-button"] {
+        text-align: center !important;
+    }
+    img[class="social-line"] {
+        width: 100% !important;
+    }
+    img[class="social-icon"] {
+        width: 100% !important;
+    }
+    td[class="footer-cta-hide"] {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .hide-nav {
+        display: none !important;
+    }
+    td[class="social-line"] {
+        display: none !important;
+    }
+    td[class="social-icon"] {
+        //width:100% !important;
+    }
+    .stack-column,
+    .stack-column-center {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        direction: ltr !important;
+    }
+    .fluid,
+    .fluid-centered {
+        width: 100% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .fluid-text {
+        width: 75% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    .fluid-hide {
+        display: none !important;
+    }
+    img[class="fluid-show"] {
+        display: block !important;
+    }
+    td[class="text"] {
+        padding: 10px 12px 10px 12px !important;
+        text-align: center !important;
+        font-family: sans-serif !important;
+        font-size: 18px !important;
+        mso-height-rule: exactly !important;
+        line-height: 20px !important;
+        color: #333333 !important;
+    }
+    .fluid-dfg {
+        width: 85% !important;
+        height: auto !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+    a[class="mobile-text"] {
+        font-size: 18px !important;
+        line-height: 20px !important;
+    }
+    td[class="image-padding1"] {
+        padding-bottom: 7px !important;
+    }
+    td[class="image-padding2"] {
+        padding-bottom: 5px !important;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    img[class="review"] {
+        width: 170px !important;
+    }
+}
+
+.SS17W10SAT {
+    .twin-blocks-table .two-column .column {
+      display: inline-block;
+      float: left;
+      vertical-align: top;
+      width: 50%;
+      max-width: 290px; }
+      .twin-blocks-table .two-column .column table {
+        width: 100%;
+        max-width: 290px; }
+      .twin-blocks-table .two-column .column img {
+        width: 290px; }
+}

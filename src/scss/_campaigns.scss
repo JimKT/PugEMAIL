@@ -1,0 +1,207 @@
+/*
+    Stylesheet for campaign specfic styles/tweaks
+*/
+
+.SS17W05SUN-v1 {
+    .countdown-block {
+        background-color: $black;
+        text-align: center;
+        img {
+            border: none;
+            display: inline-block;
+            height: auto;
+            margin-left: 3%;
+            max-width: 43%;
+            text-align: center;
+            width: 260px;
+        }
+    }
+}
+
+.SS17W05SUN-v2 {
+    table#countdown-banner {
+        table-layout: auto !important;
+    }
+}
+
+.SS17W05THU-v1, .SS17W05THU-v2 {
+    table.hero-twin {
+        background: #B1154A !important;
+        background-color: #B1154A;
+    }
+}
+
+.SS17W05THU-v1, .SS17W05THU-v2 {
+    table.menu-blocks {
+        background: #224A63 !important;
+        background-color: #224A63;
+    }
+}
+
+.SS17W05FRI-v1, .SS17W05FRI-v2, .SS17W06SUN {
+    table.style-account {
+        background: #2C3A5D !important;
+        background-color: #2C3A5D;
+    }
+    table.sale-shop {
+        background: #B1154A !important;
+        background-color: #B1154A;
+    }
+}
+
+.SS17W06MON {
+    table.sale-shop-thin {
+        background: #951536 !important;
+        background-color: #951536;
+        img {
+            margin: 0 auto;
+            width: 360px;
+            max-width: 360px;
+        }
+    }
+}
+
+.SS17W06WED {
+    table.sale-shop {
+        background: #B1154A !important;
+        background-color: #B1154A;
+    }
+}
+
+.SS17W06FRI {
+    table.shop-all-clearance {
+        background: #000000 !important;
+        background-color: #000000;
+        img {
+            margin: 0 auto;
+            width: 300px;
+            max-width: 300px;
+        }
+    }
+}
+
+.SS17W07FRI {
+    table.shop-all-footwear {
+        background: #000000 !important;
+        background-color: #000000;
+        img {
+            margin: 0 auto;
+            width: 300px;
+            max-width: 300px;
+        }
+    }
+}
+
+.SS17W08WED-v1, .SS17W08WED-v2 {
+    table#countdown-banner {
+        background: #000000 !important;
+        background-color: #000000;
+        td {
+            vertical-align: middle;
+            img {
+                vertical-align: middle;
+            }
+        }
+    }
+    table.shop-women-kids,
+    table.shop-home-mens {
+        .two-column {
+            .column {
+                img {
+                    width: 290px;
+                    max-width: 290px;
+                }
+            }
+        }
+    }
+}
+
+.SS17W09WED-v1, .SS17W09WED-v2 {
+    table.tops-and-dresses,
+    table.bags-and-jackets {
+        .two-column {
+            .column {
+                img {
+                    width: 290px;
+                    max-width: 290px;
+
+                    @media screen {
+                        width: 95% !important;
+                    }
+
+                    @media screen and (max-width: 450px) {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.SS17W09FRI {
+    table.category-navigation {
+        .twin-image {
+            img {
+                width: 290px;
+                max-width: 290px !important;
+
+                @media screen {
+                    width: 290px !important;
+                }
+            }
+        }
+    }
+}
+
+.SS17W10SUN-v1, .SS17W10SUN-v2 {
+    table.shop-button {
+        img {
+            margin: 0 auto;
+            width: 456px;
+            max-width: 456px;
+        }
+    }
+}
+
+.SS17W10TUE {
+    #countdown-banner {
+      background: #ea122a !important;
+      background-color: #ea122a;
+      table-layout: auto !important;
+    }
+}
+
+.SS17W10SAT {
+    table.side-padding {
+        .two-column {
+            .column {
+                img {
+                    width: 298px;
+                    max-width: 298px;
+
+                    @media screen {
+                        width: 295px !important;
+                    }
+
+                    @media screen and (max-width: 450px) {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.SS17W11WED {
+    .promo_cta {
+        background: #e8fcfa !important;
+        background-color: #e8fcfa;
+    }
+}
+
+.two_cta {
+    center {
+        display: inline-block;
+        width: 220px;
+    }
+}

@@ -7,8 +7,13 @@
     "url": "https://github.com/JimKT/pug-email"
   },
   "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-inline-css": "3.1.0",
+    "gulp-imagemin": "3.2.0",
+    "gulp-sass": "3.1.0",
     "gulp-pug": "3.3.0",
-    "pug": "2.0.0-beta11",
-    "gulp-replace": "*"
-    }
+    "gulp-replace": "*",
+    "pug": "2.0.0-beta11"
+  }
 }
