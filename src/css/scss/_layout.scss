@@ -1,9 +1,8 @@
 /* -------------------------------------
     BODY & CONTAINER
 ------------------------------------- */
-
 td[class="text"] {
-    padding: 4px 8px 4px 8px;
+    padding: 4px 8px;
     text-align: center;
     font-family: sans-serif;
     font-size: 11px;
@@ -12,13 +11,13 @@ td[class="text"] {
     color: #333333;
 }
 
-.button-td,
-.button-a {
+.button-a,
+.button-td {
     transition: all 100ms ease-in;
 }
 
-.button-td:hover,
-.button-a:hover {
+.button-a:hover,
+.button-td:hover {
     background: #555555 !important;
     border-color: #555555 !important;
 }
@@ -47,6 +46,7 @@ td[class="image-padding2"] {
 
 #header {
     width: 600px;
+
     td.strapline {
         color: #0c0c0c;
         font-family: arial, helvetica, sans-serif;
@@ -56,6 +56,7 @@ td[class="image-padding2"] {
         vertical-align: middle;
         width: 150px;
     }
+
     td.header-logo {
         padding: 20px 0;
         text-align: center;
@@ -79,6 +80,7 @@ td.header-logo {
 
 #header-menu {
     width: 490px;
+
     .menu-link {
         color: #0c0c0c;
         height: 45px;
@@ -87,6 +89,7 @@ td.header-logo {
         font-family: arial, helvetica, sans-serif;
         font-size: 13px;
         vertical-align: middle;
+
         a {
             color: #0c0c0c;
             display: block;
@@ -97,6 +100,7 @@ td.header-logo {
             padding: 15px 5px;
             width: 100%;
         }
+
         &.sale {
             a {
                 color: #e30613;
@@ -123,57 +127,71 @@ td.header-logo {
             text-align: center;
             width: 100%;
         }
+
         &.large {
             width: 400px;
             max-width: 400px;
+
             img {
                 max-width: 400px;
             }
         }
+
         &.small {
             width: 200px;
             max-width: 200px;
+
             img {
                 max-width: 200px;
             }
         }
     }
+
     .two-column {
         width: 600px;
         max-width: 600px;
+
         .column {
             width: 100%;
             display: inline-block;
             vertical-align: top;
+
             &.large {
                 width: 393px;
                 max-width: 393px;
                 max-width: 65.5%;
+
                 table {
                     width: 393px;
                     max-width: 393px;
                 }
+
                 img {
                     width: 393px;
                     //max-width: 393px !important;
                 }
             }
+
             &.small {
                 width: 194px;
                 max-width: 194px;
                 max-width: 32.333%;
+
                 table {
                     width: 194px;
                     max-width: 194px;
                 }
+
                 img {
                     width: 194px;
                     //max-width: 194px !important;
                 }
             }
+
             &.first {
                 float: left !important;
             }
+
             &.last {
                 float: right !important;
             }
@@ -182,8 +200,9 @@ td.header-logo {
     @media screen and (max-width: 450px) {
         .two-column {
             width: 100% !important;
-            table,
-            img {
+
+            img,
+            table {
                 width: 100% !important;
                 max-width: 100% !important;
             }
@@ -192,11 +211,14 @@ td.header-logo {
     @media screen and (min-width: 451px) and (max-width: 600px) {
         .two-column {
             width: 100% !important;
+
             .column {
                 width: 100% !important;
                 max-width: 100% !important;
+
                 table {
                     width: 100% !important;
+
                     img {
                         width: 100% !important;
                         max-width: 100% !important;
@@ -209,17 +231,21 @@ td.header-logo {
         .two-column .column {
             width: 100% !important;
             max-width: 100% !important;
+
             table {
                 width: 100% !important;
             }
+
             img {
                 max-width: 100% !important;
             }
+
             &.large {
                 img {
                     max-width: 100% !important;
                 }
             }
+
             &.small {
                 img {
                     max-width: 100% !important;
@@ -232,19 +258,23 @@ td.header-logo {
             &.large {
                 max-width: 393px !important;
                 max-width: 65.5% !important;
+
                 img {
                     max-width: 393px !important;
                 }
             }
+
             &.small {
                 max-width: 194px !important;
                 max-width: 32.333% !important;
+
                 img {
                     max-width: 194px !important;
                 }
             }
         }
     }
+
     .white-spacer-img {
         max-width: 15px !important;
         width: 15px !important;
@@ -254,6 +284,7 @@ td.header-logo {
 .title-strip-table {
     .title-strip {
         width: 300px;
+
         img {
             border: none;
             height: auto;
@@ -267,13 +298,16 @@ td.header-logo {
         }
         @media screen and (min-width: 451px) and (max-width: 624px) {
             width: 75%;
+
             img {
                 width: 100%;
             }
         }
     }
+
     .title-strip-line {
         width: 150px;
+
         img {
             border: none;
             height: auto;
@@ -285,15 +319,19 @@ td.header-logo {
             display: none;
         }
     }
+
     &.large {
         .title-strip {
             width: 420px;
+
             img {
                 width: 420px;
             }
         }
+
         .title-strip-line {
             width: 90px;
+
             img {
                 width: 90px;
             }
@@ -311,26 +349,32 @@ td.header-logo {
             width: 100%;
         }
     }
+
     .two-column {
         width: 600px;
         max-width: 600px;
+
         .column {
             display: inline-block;
             float: left;
             vertical-align: top;
             width: 50%;
             max-width: 298px;
+
             table {
                 width: 100%;
                 max-width: 298px;
             }
+
             img {
                 width: 298px;
             }
+
             &:nth-child(even) {
                 float: right;
-                table,
-                img {
+
+                img,
+                table {
                     float: right;
                 }
             }
@@ -338,6 +382,7 @@ td.header-logo {
             &.first {
                 float: left !important;
             }
+
             &.last {
                 float: right !important;
 
@@ -350,8 +395,9 @@ td.header-logo {
     @media screen and (max-width: 450px) {
         .two-column {
             width: 100% !important;
-            table,
-            img {
+
+            img,
+            table {
                 width: 100% !important;
                 max-width: 100% !important;
             }
@@ -366,9 +412,11 @@ td.header-logo {
         .two-column .column {
             width: 100% !important;
             max-width: 100% !important;
+
             table {
                 width: 100% !important;
             }
+
             img {
                 max-width: 100% !important;
             }
@@ -385,24 +433,30 @@ td.header-logo {
             width: 100%;
         }
     }
+
     .three-column {
         width: 600px;
         max-width: 600px;
+
         .column {
             display: inline-block;
             vertical-align: top;
             width: 32.5%;
             max-width: 198px;
+
             table {
                 width: 100%;
                 max-width: 198px;
             }
+
             img {
                 width: 198px;
             }
+
             &.first {
                 float: left;
             }
+
             &.last {
                 float: right;
             }
@@ -411,8 +465,9 @@ td.header-logo {
     @media screen and (max-width: 450px) {
         .three-column {
             width: 100% !important;
-            table,
-            img {
+
+            img,
+            table {
                 width: 100% !important;
                 max-width: 100% !important;
             }
@@ -427,9 +482,11 @@ td.header-logo {
         .three-column .column {
             width: 100% !important;
             max-width: 100% !important;
+
             table {
                 width: 100% !important;
             }
+
             img {
                 max-width: 100% !important;
             }
@@ -447,18 +504,22 @@ td.header-logo {
             width: 100%;
         }
     }
+
     .four-column {
         width: 600px;
         max-width: 600px;
+
         .column {
             display: inline-block;
             vertical-align: top;
             width: 24%;
             max-width: 147px;
+
             table {
                 width: 100%;
                 max-width: 147px;
             }
+
             img {
                 width: 147px;
             }
@@ -467,8 +528,9 @@ td.header-logo {
     @media screen and (max-width: 450px) {
         .four-column {
             width: 100% !important;
-            table,
-            img {
+
+            img,
+            table {
                 width: 100% !important;
                 max-width: 100% !important;
             }
@@ -483,9 +545,11 @@ td.header-logo {
         .four-column .column {
             width: 49% !important;
             max-width: 49% !important;
+
             table {
                 width: 100% !important;
             }
+
             img {
                 max-width: 100% !important;
             }
@@ -523,29 +587,45 @@ td.header-logo {
 }
 
 .triple-blocks-fixed-table {
-    img {
-        border: none;
-        height: auto;
-        max-width: 195px;
-        text-align: center;
-        width: 195px;
-        //Trick outlook
-        @media screen {
-            width: 100% !important;
+    .triplet-block {
+        img {
+            border: none;
+            height: auto;
+            max-width: 195px;
+            text-align: center;
+            width: 195px;
+            //Trick outlook
+            @media screen {
+                width: 100% !important;
+            }
         }
     }
 
-    @media screen and (max-width: 450px) {
-        .three-column {
-            width: 195px !important;
+    .three-column {
+        width: 600px;
+        max-width: 600px;
 
-            .column {
-                width: 195px!important;
+        .column {
+            display: inline-block;
+            vertical-align: top;
+            width: 32.5%;
+            max-width: 198px;
+
+            table {
+                width: 100%;
+                max-width: 198px;
             }
 
             img {
-                width: 100% !important;
-                max-width: 100% !important;
+                width: 198px;
+            }
+
+            &.first {
+                float: left;
+            }
+
+            &.last {
+                float: right;
             }
         }
     }
@@ -561,6 +641,7 @@ td.header-logo {
             width: 5px;
         }
     }
+
     &.ten-spacer {
         .white-spacer-img {
             display: block !important;
@@ -570,6 +651,7 @@ td.header-logo {
             width: 10px;
         }
     }
+
     &.fifteen-spacer {
         .white-spacer-img {
             display: block !important;
@@ -579,6 +661,7 @@ td.header-logo {
             width: 15px;
         }
     }
+
     &.twenty-spacer {
         .white-spacer-img {
             display: block !important;
@@ -618,6 +701,17 @@ td.header-logo {
             width: 50px;
         }
     }
+
+    &.eighty-spacer {
+        .white-spacer-img {
+            display: block !important;
+            max-height: 80px;
+            height: 80px;
+            max-width: 80px;
+            width: 80px;
+        }
+    }
+
     @media screen and (max-width: 450px) {
         &.ten-spacer-mobile {
             .white-spacer-img {
@@ -654,6 +748,7 @@ td.header-logo {
             width: 100% !important;
         }
     }
+
     area {
         outline: 0;
     }
@@ -662,6 +757,7 @@ td.header-logo {
 #footer-cta-block {
     td.footer-cta {
         width: 50%;
+
         .footer-cta-button {
             height: auto;
             max-width: 300px;
@@ -677,6 +773,7 @@ td.header-logo {
 #footer-social-block {
     td.social-icon {
         width: 10%;
+
         img {
             height: auto;
             width: 60px;
@@ -686,6 +783,7 @@ td.header-logo {
             }
         }
     }
+
     img.social-line {
         width: 120px;
         //Trick outlook
@@ -698,6 +796,7 @@ td.header-logo {
 #footer-reviews {
     td.footer-cta {
         width: 50%;
+
         .footer-cta-button {
             height: auto;
             max-width: 300px;
@@ -711,15 +810,16 @@ td.header-logo {
 }
 
 #footer-terms {
-    td,
-    p {
+    p,
+    td {
         color: #828282;
         font-family: arial, helvetica, sans-serif;
         font-size: 11px;
-        padding: 0px 5px 10px 5px;
+        padding: 0 5px 10px;
         text-align: left;
         vertical-align: middle;
         font-weight: normal;
+
         a {
             color: #828282 !important;
             font-weight: bold;
