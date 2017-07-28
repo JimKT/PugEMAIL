@@ -83,6 +83,13 @@ gulp.task('sass', () =>
 		.pipe(sass().on('error', sass.logError))
 		.pipe(gulp.dest('./dist/css'))
 );
+// Compile Sass
+gulp.task('replace-links', () => 
+	gulp.src(distHTML + 'index.html')
+		.pipe(replace('aspx', 'aspx?omniturecode=Email_Commercial_' + tracking + '&ecm_mid=' + mid + '&nc=' + nc + '&utm_source=PromotionalEmail&utm_medium=Email&utm_campaign=' + tracking))
+		.pipe(replace('images', 'https://s3-eu-west-1.amazonaws.com/hub-mdp/emails/la-redoute_emails/' + campaign))
+		.pipe(gulp.dest('./dist/' + week + '/' + campaign + '/'))
+	);
 // Inline CSS
 gulp.task('inline-css', () => 
 	gulp.src('dist/' + week + '/' + campaign + '/index.html')
