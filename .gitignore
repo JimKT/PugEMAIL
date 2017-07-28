@@ -1,2 +1,4 @@
 node_modules
 *.html
+src/credentials.json
+dist

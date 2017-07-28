@@ -227,7 +227,7 @@
     }
   }
 }
-
+ 
 .J144 {
   table#countdown-banner {
     background: #e20f22 !important;
@@ -240,8 +240,28 @@
   }
 }
 
-table#countdown-banner {
-  background: #e20f22 !important;
-  background-color: #e20f22;
-  table-layout: auto !important;
+//
+// table#countdown-banner {
+//   background: #e20f22 !important;
+//   background-color: #e20f22;
+//   table-layout: auto !important;
+// }
+
+
+.J232 {
+    table#countdown-banner {
+        background: transparent !important;
+        background-color: transparent;
+        table-layout: auto !important;
+
+        text-align: center;
+        img {
+            border: none;
+            display: inline-block;
+            height: auto;
+            text-align: center;
+            width: 500px;
+        }
+    }
 }
+ 

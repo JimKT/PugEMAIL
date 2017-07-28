@@ -1,94 +1,122 @@
 "use strict";
-// Require the Following to Work
 const gulp = require('gulp');
 const runSequence = require('run-sequence');
 const replace = require('gulp-replace');
 const clean = require('gulp-clean');
 const rename = require('gulp-rename');
+const imagemin = require('gulp-imagemin');
+const pug = require('gulp-pug');
 const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 const inlinesource = require('gulp-inline-source');
 const inlineCss = require('gulp-inline-css');
-const pug = require('gulp-pug');
-const imagemin = require('gulp-imagemin');
-const browserSync = require('browser-sync').create();
-
-// Campaign Specific Variables
-const week = 'WK12';
-const job = 'J12';
-const directory = 'emails/' + week + '/' + job + '/';
-
-// Static server
-gulp.task('browser-sync', function() {
-    browserSync.init({
-		proxy: 'localhost/pugemail/layout.html'
-    });
-});
-gulp.task('clean', function(){
-    return gulp.src('dist/**/*.html')
-    .pipe(clean());
-});
-
-gulp.task('inlinesource', function () {
-    return gulp.src('dist/' + directory + 'compiled.html')
-    .pipe(inlinesource())
-    .pipe(gulp.dest('dist/' + directory));
-});
-
-// PUG Compile
-gulp.task('views', function buildHTML() {
-    return gulp.src('src/' + directory + 'layout.pug')
-    .pipe(pug({
-        pretty: true
-    }))
-    .pipe(gulp.dest('./dist/' + directory));
-});
-
-
-gulp.task('sync-file', function buildHTML() {
-    return gulp.src('src/' + directory + 'layout.pug')
-    .pipe(pug({
-        pretty: true
-    }))
-    .pipe(gulp.dest('./'));
-});
-
-// SASS
-gulp.task('sass', function () {
-  return gulp.src('src/css/scss/style.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('dist/css'));
-});
-
-gulp.task('replace', function() {
-    return gulp.src(['dist/' + directory + 'layout.html'])
-    .pipe(replace('./css/style.css', '../../../css/style.css'))
-	.pipe(rename("compiled.html"))
-	.pipe(gulp.dest('dist/' + directory));
-});
-
-gulp.task('inline', function() {
-    return gulp.src('dist/' + directory + 'compiled.html')
-	.pipe(inlineCss({
-            	applyStyleTags: true,
-            	applyLinkTags: true,
-            	removeStyleTags: true,
-            	removeLinkTags: true
-        }))
-
-    .pipe(gulp.dest('dist/' + directory));
-});
-
-// Image Minification
-gulp.task('images', function(){
-    gulp.src('src/' + directory + 'img/*')
-        .pipe(imagemin())
-        .pipe(gulp.dest('dist/' + directory + 'img/'))
-});
+const prettify = require('gulp-jsbeautifier');
+const litmus = require('gulp-litmus');
+const campaigns = require('./src/config');
+const credentials = require('./src/credentials');
+const week = campaigns.Week;
+const campaign = campaigns.Campaign;
+const tracking = campaigns.Tracking;
+const mid = campaigns.Mid;
+const nc = campaigns.Nc;
+const litmusUser = credentials.LitmusUsername;
+const litmusPass = credentials.LitmusPassword;
+const litmusUrl = credentials.LitmusURL;
+const imgSrc = './src/' + week + campaign + '/img/';
+const styleSrc = './src/css/**/*.scss';
+const distHTML = './dist/' + week + '/' + campaign + '/';
+const campaignName = './src/views/' + week + '/' + campaign;
+const pugIndex = './src/views/' + week + '/' + campaign + '/index.pug';
+// Test to Litmus
+const config = {
+	subject: campaign,
+    username: litmusUser,
+    password: litmusPass,
+    url: litmusUrl,
+    applications: [
+		// Gmail
+        'gmailnew',
+        'ffgmailnew',
+		'chromegmailnew',
+		// Yahoo
+		'yahoo',
+		'ffyahoo',
+		'chromeyahoo',
+		// Outlook
+		'outlookcom',
+		'ffoutlookcom',
+		'chromeoutlookcom',
+		// Outlook ( Desktop )
+		'ol2007',
+		'ol2010',
+		'ol2013',
+		// Android
+		'android4',
+		'androidgmailapp',
+		'iphone5s',
+		'iphone6',
+		'iphone6plus',
+		'iphone6s',
+    ]
+}
+gulp.task('litmus', () =>
+	gulp.src(distHTML + 'index.html')
+		.pipe(litmus(config))
+		.pipe(gulp.dest('dist'))
+);
+// Convert PUG into HTML
+gulp.task('pug', () =>
+	 gulp.src(pugIndex)
+		.pipe(pug({
+			pretty: true
+		}))
+		.pipe(gulp.dest('./dist/' + week + '/' + campaign))
+);
+gulp.task('latest', () =>
+	 gulp.src(distHTML + 'index.html')
+		.pipe(rename("latest.html"))
+		.pipe(gulp.dest('./dist/'))
+);
+// Compile Sass
+gulp.task('sass', () => 
+	gulp.src(styleSrc)
+		.pipe(sass().on('error', sass.logError))
+		.pipe(gulp.dest('./dist/css'))
+);
+// Inline CSS
+gulp.task('inline-css', () => 
+	gulp.src('dist/' + week + '/' + campaign + '/index.html')
+        .pipe(inlineCss())
+        .pipe(gulp.dest('./dist/' + week + '/' + campaign + '/'))
+);
+// Minify Images
+gulp.task('images', () =>
+	gulp.src('src/W01/J286/img/*')
+	.pipe(imagemin({
+		optimizationLevel: 5
+	}))
+	.pipe(gulp.dest('dist/' + week + '/' + campaign + '/img/'))
+);
+// Beautify HTML
+gulp.task('beautify', () => 
+	gulp.src(distHTML + 'index.html')
+		.pipe(prettify())
+		.pipe(gulp.dest(distHTML))
+);
 // Default ( Runs all Tasks on Watch )
-gulp.task('build', function() {
-    runSequence('clean', 'sass', 'views', 'replace', 'inlinesource', 'inline',  'images');
-});
-// Default ( Runs all Tasks on Watch )
+gulp.task('watch-src', () => 
+	runSequence('pug', 'sass', 'inline-css', 'replace-links', 'beautify', 'latest')
+);
+gulp.task('watch-js', () =>
+	runSequence('clean-dist','pug','live', 'mobile', 'prettify')
+);
+gulp.task('watch-images', () =>
+	runSequence('clean-dist','pug','live', 'mobile', 'prettify')
+);
 gulp.task('default', function() {
-    gulp.watch(['./src/**/*'], ['build']);
+	console.log('Welcome to PUG Email Creator. The current campaign is ' + week + '/' + campaign),
+	gulp.watch([styleSrc], ['watch-src']),
+	gulp.watch([pugIndex], ['watch-src']),
+	gulp.watch([campaignName + '/src/js/**/*'], ['watch-js']),
+	gulp.watch([campaignName + '/src/img/**/*'], ['watch-images'])
 });

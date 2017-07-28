@@ -1,0 +1,21 @@
+include ../../components/head.pug
+
+//- Single Image ( Full Width)
+table.email-container
+    tr
+        td
+            img(src="images/test_five.jpg")
+        td
+            img(src="images/test_five.jpg")
+//- Image Map
+table.email-container
+    tr 
+        td
+            img(usemap="#three_image" class="area-map" src="images/test_one.jpg")
+            map(name="three_image")
+                area(shape="rect" coords="23,1,577,584" href="1")
+                area(shape="rect" coords="23,593,203,835" href="2")
+                area(shape="rect" coords="211,594,391,836" href="3")
+                area(shape="rect" coords="399,594,579,837" href="4")
+                
+include ../../components/foot.pug
