@@ -1,260 +1,63 @@
-body[yahoo] table {
-    border-spacing: 0px!important;
-    border-collapse: collapse!important;
+body[yahoo], html, body {
+	margin: 0px!important;
+	padding: 0px!important;
+	-webkit-text-size-adjust: none!important;
+	-ms-text-size-adjust: none!important;
+	line-height: 100%!important;
 }
-body[yahoo] img {
-    display: block!important;
-}
-body[yahoo] table td {
-    border-collapse: collapse!important;
-}
-body[yahoo],
-html,
-body {
-    margin: 0px!important;
-    padding: 0px!important;
-    -webkit-text-size-adjust: none!important;
-    -ms-text-size-adjust: none!important;
-    line-height: 100%!important;
-}
-body[yahoo] .max-width {
-    max-width: 600px;
-}
-body[yahoo] .invisible-preheader {
-    width: 0px!important;
-    height: 0px!important;
-    font-size: 0px!important;
-    line-height: 0px!important;
-    display: none!important;
-    color: #e8e8e8!important;
-}
-body[yahoo] .mobilecookiestatement {
-    display: none;
-    mso-hide: all;
-}
-@media screen and (max-width: 480px) {
-    body[yahoo] .hidethis {
-        width: 0px!important;
-        display: none!important;
-    }
-    body[yahoo] .cookiestatement {
-        text-align: center!important;
-    }
-    body[yahoo] td {
-        background-image: none!important;
-    }
-    body[yahoo] .mobilecookiestatement {
-        display: block!important;
-        width: 300px!important;
-        font-family: Arial, Helvetica, sans-serif!important;
-        font-size: 9px!important;
-        color: #000000!important;
-        text-align: center!important;
-        line-height: 30px!important;
-    }
-    body[yahoo] .mobilecookiestatementlink {
-        font-family: Arial, Helvetica, sans-serif!important;
-        font-size: 9px!important;
-        color: #000000!important;
-        text-align: center!important;
-        line-height: 30px!important;
-        text-decoration: underline;
-    }
-    body[yahoo] .max-width {
-        max-width: 300px!important;
-        width: 300px!important;
-    }
-    body[yahoo] .max-width260 {
-        max-width: 260px!important;
-        width: 260px!important;
-    }
-    body[yahoo] .fullwidth {
-        width: 100%!important;
-        height: auto!important;
-        display: block!important;
-    }
-    body[yahoo] .halfwidth {
-        width: 50%!important;
-        display: block!important;
-    }
-    body[yahoo] .fsz28 {
-        font-size: 28px!important;
-    }
-    body[yahoo] .quarterwidth {
-        width: 25%!important;
-        display: block!important;
-    }
-    body[yahoo] .td10 {
-        height: 10px!important;
-    }
-    body[yahoo] .td20 {
-        height: 20px!important;
-    }
-    body[yahoo] .td30 {
-        height: 30px!important;
-    }
-    body[yahoo] .mb10 {
-        display: block!important;
-        margin-bottom: 10px!important;
-    }
-    body[yahoo] .imageresize {
-        width: 300px!important;
-        height: auto!important;
-    }
-    body[yahoo] .imageresize260 {
-        width: 260px!important;
-        height: auto!important;
-    }
-    body[yahoo] .mb15 {
-        display: block!important;
-        margin-bottom: 15px!important;
-    }
-    body[yahoo] .mb20 {
-        display: block!important;
-        margin-bottom: 20px!important;
-    }
-    body[yahoo] .mb30 {
-        display: block!important;
-        margin-bottom: 30px!important;
-    }
-    body[yahoo] .mb40 {
-        display: block!important;
-        margin-bottom: 40px!important;
-    }
-    body[yahoo] .max270 {
-        width: 250px!important;
-        max-width: 250px!important;
-    }
-    body[yahoo] .mt10 {
-        display: block!important;
-        margin-top: 10px!important;
-    }
-    body[yahoo] .mt15 {
-        display: block!important;
-        margin-top: 15px!important;
-    }
-    body[yahoo] .mt20 {
-        display: block!important;
-        margin-top: 20px!important;
-    }
-    body[yahoo] .mt70 {
-        display: block!important;
-        margin-top: 70px!important;
-    }
-    body[yahoo] .mb70 {
-        display: block!important;
-        margin-bottom: 70px!important;
-    }
-    body[yahoo] .pb10 {
-        display: block!important;
-        padding-bottom: 10px!important;
-    }
-    body[yahoo] .height100 {
-        height: 100px!important;
-    }
-    body[yahoo] .pb15 {
-        display: block!important;
-        padding-bottom: 15px!important;
-    }
-    body[yahoo] .pb20 {
-        display: block!important;
-        padding-bottom: 20px!important;
-    }
-    body[yahoo] .pt10 {
-        display: block!important;
-        padding-top: 10px!important;
-    }
-    body[yahoo] .pt15 {
-        display: block!important;
-        padding-top: 15px!important;
-    }
-    body[yahoo] .pt20 {
-        display: block!important;
-        padding-top: 20px!important;
-    }
-    body[yahoo] .imgfull {
-        width: 300px!important;
-        height: auto!important;
-    }
-    body[yahoo] .textcenter {
-        text-align: center!important;
-    }
-    body[yahoo] .textleft {
-        text-align: left!important;
-    }
-    body[yahoo] .textright {
-        text-align: right!important;
-    }
-    body[yahoo] .fsz14 {
-        font-size: 10px!important;
-    }
-    body[yahoo] .fsz12 {
-        font-size: 12px!important;
-    }
-    body[yahoo] .fsz20 {
-        font-size: 20px!important;
-    }
-    body[yahoo] .fsz22 {
-        font-size: 22px!important;
-    }
-    body[yahoo] .fsz25 {
-        font-size: 25px!important;
-    }
-    body[yahoo] .fsz30 {
-        font-size: 30px!important;
-    }
-    body[yahoo] .lh20 {
-        line-height: 30px!important;
-    }
-    body[yahoo] .lh30 {
-        line-height: 30px!important;
-    }
-    body[yahoo] .lh40 {
-        line-height: 40px!important;
-    }
-    body[yahoo] .bgffffff {
-        background-color: #ffffff!important;
-    }
-    body[yahoo] .bg000000 {
-        background-color: #000000!important;
-    }
-    body[yahoo] .bge31c23 {
-        background-color: #e31c23!important;
-    }
-    body[yahoo] .bg59d47e {
-        background-color: #59d47e!important;
-    }
-    body[yahoo] .bgf2c44b {
-        background-color: #f2c44b!important;
-    }
-    body[yahoo] .br1 {
-        border-right: 1px solid #d1d2d4!important;
-    }
-    body[yahoo] .bry {
-        border-right: 1px solid #d1d2d4!important;
-    }
-    body[yahoo] .bty {
-        border-top: 1px solid #d1d2d4!important;
-    }
-    body[yahoo] .bby {
-        border-bottom: 1px solid #d1d2d4!important;
-    }
-    body[yahoo] .bly {
-        border-left: 1px solid #d1d2d4!important;
-    }
-    body[yahoo] .brn {
-        border-right: none!important;
-    }
-    body[yahoo] .nbb {
-        border-bottom: none!important;
-    }
-    body[yahoo] .btn {
-        border-top: none!important;
-    }
-    body[yahoo] .bbn {
-        border-bottom: 0px!important;
-    }
-    body[yahoo] .bln {
-        border-left: none!important;
-    }
+
+body[yahoo] {
+
+	table {
+		border-spacing: 0px!important;
+		border-collapse: collapse!important;
+
+		td {
+			border-collapse: collapse!important;
+		}
+	}
+	
+	img {
+		display: block!important;
+	}
+	
+	.text-center {
+		text-align: center!important;
+	}
+	.text-left {
+			text-align: left!important;
+	}
+	.text-right {
+			text-align: right!important;
+	}
+
+	.max-width {
+		max-width: 600px;
+	}
+	@media screen and (max-width: 480px) {
+		
+		td {
+				background-image: none!important;
+		}
+
+		.max-width {
+				max-width: 300px!important;
+				width: 300px!important;
+		}
+
+		.full-width {
+				width: 100%!important;
+				height: auto!important;
+				display: block!important;
+		}
+
+		.imageresize {
+				width: 300px!important;
+				height: auto!important;
+		}
+		.imageresize260 {
+				width: 260px!important;
+				height: auto!important;
+		}
+	}
 }

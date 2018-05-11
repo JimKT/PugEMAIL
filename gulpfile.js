@@ -14,8 +14,8 @@ const inlinesource = require('gulp-inline-source');
 const inlineCss = require('gulp-inline-css');
 
 // Directories 
-const campaignName = 'kin-april';
-const imgSrc = './src/' + campaignName + '/img/';
+const campaignName = 'test-email';
+const imgSrc = './src/' + campaignName + '/images/';
 const styleSrc = './src/css/main.scss';
 const pugIndex = './src/' + campaignName + '/index.pug';
 const distHTML = './dist/' + campaignName + '/';
@@ -47,27 +47,27 @@ gulp.task('inline-css', () =>
 );
 // Minify Images
 gulp.task('images', () =>
-	gulp.src(imgSrc)
+	gulp.src(imgSrc + '*')
 	.pipe(imagemin({
 		optimizationLevel: 5
 	}))
-	.pipe(gulp.dest('dist/' + campaignName + '/img/'))
+	.pipe(gulp.dest('dist/' + campaignName + '/images/'))
 );
 // Beautify HTML
 gulp.task('beautify', () => 
 	gulp.src(distHTML + 'index.html')
 		.pipe(prettify())
-		.pipe(gulp.dest(distHTML))
+		.pipe(gulp.dest(distHTML)) 
 );
 // Default ( Runs all Tasks on Watch )
 gulp.task('watch-src', () => 
-	runSequence('pug', 'sass', 'inline-css', 'latest', 'beautify')
+	runSequence('pug', 'sass', 'inline-css', 'latest', 'beautify', 'images')
 );
 gulp.task('watch-js', () =>
-	runSequence('clean-dist','pug','live', 'mobile', 'prettify')
+	runSequence('clean-dist','pug','live', 'mobile', 'prettify', 'images')
 );
 gulp.task('watch-images', () =>
-	runSequence('clean-dist','pug','live', 'mobile', 'prettify')
+	runSequence('clean-dist','pug','live', 'mobile', 'prettify', 'images')
 );
 gulp.task('default', function() {
 	console.log('Welcome to PUG Email Creator. The current campaign is ' + campaignName),
