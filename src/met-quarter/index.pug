@@ -1,0 +1,39 @@
+include ../views/mixins.pug
+include ../views/components/head.pug
+//- START HEADER
+tr
+	td(bgcolor="#ffffff" align="center" valign="top")
+		table.max-width(width="600" cellpadding="0" cellspacing="0" align="center")
+			tr
+				td.max-width.text-right(width="300")
+					table(cellpadding="0" cellspacing="0" align="left")
+						tr
+							td
+								+image(23,23,'images/icon-facebook.jpg')
+							td(width="15")
+							td
+								+image(23,23,'images/icon-twitter.jpg')
+							td(width="15")
+							td
+								+image(23,23,'images/icon-instagram.jpg')
+				td.max-width.text-right
+					table(width="193" cellpadding="0" cellspacing="0" align="right")
+						tr
+							td
+								img(src="images/logo.jpg" alt="Logo")
+//- END HEADER
+tr
+	td(bgcolor="#ffffff" align="center" valign="top")
+		table.max-width(width="600" cellpadding="0" cellspacing="0" align="center")
+			tr
+				td
+					+one-column(
+						'500',
+						'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
+					)
+					+two-column(
+						'500',
+						'Hello There asd',
+						'This is Content'
+					)
+include ../views/components/foot.pug

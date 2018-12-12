@@ -12,13 +12,35 @@ const prettify = require('gulp-jsbeautifier');
 const autoprefixer = require('gulp-autoprefixer');
 const inlinesource = require('gulp-inline-source');
 const inlineCss = require('gulp-inline-css');
-
+const litmus = require('gulp-litmus');
 // Directories 
-const campaignName = 'test-email';
+const campaignName = 'met-quarter';
 const imgSrc = './src/' + campaignName + '/images/';
 const styleSrc = './src/css/main.scss';
 const pugIndex = './src/' + campaignName + '/index.pug';
 const distHTML = './dist/' + campaignName + '/';
+const secret = require('./secret.json');
+
+
+ 
+const config = {
+    username: secret.user,
+    password: secret.password,
+    url: secret.url,
+    applications: [
+        'applemail6',
+        'gmailnew',
+        'ffgmailnew',
+        'chromegmailnew',
+        'iphone4s',
+    ]
+}
+ 
+gulp.task('litmus', () =>
+    gulp.src('dist/latest.html')
+        .pipe(litmus(config))
+        .pipe(gulp.dest('dist'))
+);
 
 // Convert PUG into HTML
 gulp.task('pug', () =>
@@ -73,6 +95,7 @@ gulp.task('default', function() {
 	console.log('Welcome to PUG Email Creator. The current campaign is ' + campaignName),
 	gulp.watch([styleSrc], ['watch-src']),
 	gulp.watch([pugIndex], ['watch-src']),
+	gulp.watch(['./src/views/**/*.pug'], ['watch-src']),
 	gulp.watch([campaignName + '/src/js/**/*'], ['watch-js']),
 	gulp.watch([campaignName + '/src/img/**/*'], ['watch-images'])
 });
