@@ -12,7 +12,6 @@ const prettify = require('gulp-jsbeautifier');
 const autoprefixer = require('gulp-autoprefixer');
 const inlinesource = require('gulp-inline-source');
 const inlineCss = require('gulp-inline-css');
-const litmus = require('gulp-litmus');
 // Directories 
 const campaignName = 'met-quarter';
 const imgSrc = './src/' + campaignName + '/images/';
@@ -35,12 +34,6 @@ const config = {
         'iphone4s',
     ]
 }
- 
-gulp.task('litmus', () =>
-    gulp.src('dist/latest.html')
-        .pipe(litmus(config))
-        .pipe(gulp.dest('dist'))
-);
 
 // Convert PUG into HTML
 gulp.task('pug', () =>
