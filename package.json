@@ -6,23 +6,12 @@
     "type": "git"
   },
   "devDependencies": {
-    "gulp": "^4.0.0",
-    "gulp-autoprefixer": "5.0.0",
-    "gulp-beautify": "2.0.1",
-    "gulp-clean": "0.4.0",
+    "gulp": "4.0.2",
     "gulp-cli": "2.0.1",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-inline-css": "3.2.0",
-    "gulp-inline-source": "3.1.0",
-    "gulp-jsbeautifier": "^2.1.1",
-    "gulp-pug": "3.3.0",
-    "gulp-rename": "1.2.2",
-    "gulp-replace": "0.6.1",
-    "gulp-sass": "3.2.1",
-    "run-sequence": "2.2.1"
-  },
-  "dependencies": {
-    "npm": "^6.6.0",
-    "npm-audit": "0.0.3"
+    "gulp-imagemin": "6.1.0",
+    "gulp-inline-source": "4.0.0",
+    "gulp-jsbeautifier": "3.0.1",
+    "gulp-pug": "4.0.1",
+    "gulp-sass": "4.0.2"
   }
 }
